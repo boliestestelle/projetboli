@@ -1,0 +1,30 @@
+Span
+
+
+<?php
+  echo 'onAIR';
+  include('simple_html_dom.php');
+ // $websetUrl ="http://www.palmbeachcodeschool.com/news/";
+ 
+  $websetUrl ="https://www.blot-immobilier.fr/habitat/achat/maison/ille-et-vilaine/";
+ 
+  $html =file_get_html($websetUrl);
+  //abb-blog-post-section
+ // foreach($html->find('.uabb-blog-post-section')as $postDiv)
+  foreach($html->find('.chiffres_cles') as $postDiv)
+  {
+  		foreach($postDiv->find('span') as $a)
+  		{
+      echo $a. "<br>";
+	}
+  }
+
+
+
+
+    foreach ($postDiv->find('span') as $r) {
+    echo $r . "<br>";
+   }
+foreach ($postDiv->find('a') as $a) {
+    echo $a . "<br>";
+   }
